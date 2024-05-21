@@ -15,13 +15,6 @@ public class Order{
     private double price;
     private int volume;
     private final LocalDateTime orderTime;
-    public enum OrderStatus{
-        OPEN,
-        FILLED,
-        CANCELLED
-    }
-    private OrderStatus status;
-
 
     // constructor for an order in the order book
      
@@ -32,7 +25,7 @@ public class Order{
         this.price = price;
         this.volume = volume;
         orderTime = LocalDateTime.now(ZoneOffset.UTC);
-        status = OrderStatus.OPEN;
+    
     }
 
     // Getters and Setters for the variables of the orders
@@ -61,13 +54,6 @@ public class Order{
     }
     public void setVolume(int volume){
         this.volume = volume;
-    }
-
-    public OrderStatus getStatus(){
-        return status;
-    }
-    public void setStatus(OrderStatus status){
-        this.status = status;
     }
 
     public LocalDateTime getOrderTime(){
