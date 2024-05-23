@@ -1,0 +1,9 @@
+Mean Reversion Trading Method:
+- Stock must have over 75K volume, model was backtested with AAPL stocks
+
+Methodology:
+1) Calculate a 5 day SMA and Bollinger Bands with a 2 standard deviation variance
+2) Optionally for lower risk, also add tighter Bollinger Bands, with just a 1 standard deviation variance from the SMA
+3) Once the pricd deviates above or below, either short or buy the stock respectably 
+4) Close half the trades once it reaches the tight Bollinger Bands, then completely when it reaches the SMA
+5) Alternatively if higher risk, only exit once it rereaches the SMA

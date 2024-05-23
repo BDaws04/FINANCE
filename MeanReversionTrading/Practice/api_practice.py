@@ -6,11 +6,12 @@ def getAPIKey():
     with open ("C:/Users/hp/Desktop/GitHub-Projects/FINANCE/MeanReversionTrading/api_key.txt", 'r') as file:
         key = file.read().strip()
     return key
+
+symbol = "AAPL"
+
     
 API_KEY = getAPIKey()
 ts = TimeSeries(key=API_KEY, output_format='pandas')
-
-symbol = 'AAPL'
 
 data, meta_data = ts.get_monthly_adjusted(symbol=symbol)
 
