@@ -1,6 +1,6 @@
-import alpaca_trade_api as trade
 import pandas as pd
 import numpy as np
+import Statistics as stats
 
 
 def loadKeys():
@@ -13,6 +13,5 @@ def loadKeys():
         return API_KEY, SECRET_KEY
 
 API_KEY, SECRET_KEY = loadKeys()
-print(API_KEY)
-print(SECRET_KEY)
+stats.getData(API_KEY, SECRET_KEY)
     
