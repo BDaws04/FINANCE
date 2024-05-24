@@ -1,0 +1,4 @@
+
+
+def getData(key, secret):
+    ...
