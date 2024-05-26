@@ -8,6 +8,7 @@ def getData(key, secret):
 
     if account.trading_blocked:
         print('Account is currently restricted from trading.')
+        exit(0)
 
     print('${} is available as buying power.'.format(account.buying_power))
     balance_change = float(account.equity) - float(account.last_equity)
