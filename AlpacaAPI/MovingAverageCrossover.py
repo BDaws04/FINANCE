@@ -4,9 +4,12 @@ import Statistics as stats
 from alpaca.trading.client import TradingClient
 from alpaca.trading.client import GetAssetsRequest
 import time
+from alpaca.trading.requests import MarketOrderRequest
+from alpaca.trading.enums import OrderSide, TimeInForce
 
 
 # This function will be used to load the API keys from a file
+# Uses text files as opposed to environment variables as they frequently get deleted
 def loadKeys():
     with open("AlpacaAPI\Keys.txt") as file:
         try:
@@ -46,6 +49,13 @@ def getPositon(client, stock):
     print(f"Symbol: {position.symbol}, Quantity: {position.qty}, Market Value: {position.market_value}")
     return position
 #Functions to get data about account and the exchange ^^
+
+
+#Functions for trading vv
+
+
+
+#Functions for trading ^^
 
 
 # This function will be used to run the bot
