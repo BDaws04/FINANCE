@@ -13,6 +13,16 @@ File for testing trading strategies, where the required ticks is one minute
 This is a general file, particular changes for testing a particular stock/strategy should not be saved to this master file
 """
 
+def simulateTrades(prices: DataFrame, cash: int):
+
+    for index, row in prices.iterrows():
+        
+        symbol,date = index
+
+        price = row['close']
+        date = index[1].date()
+
+
 def plotGraph(spy: DataFrame, stock: DataFrame, balance: float, label: str):
     
     spyPrices = spy['close']
@@ -76,10 +86,10 @@ def loadData(api: str, secret: str, stock: str):
 
 def test(stock: str):
     API_KEY, SECRET_KEY = loadKeys()
-    starting_balance = 10000
+    startingBalance = 10000
     dailyData, minuteData, spy = loadData(API_KEY, SECRET_KEY, stock)
 
-    plotGraph(spy, dailyData, 10000, stock)
+    simulateTrades(dailyData, startingBalance)
     
 if __name__ == '__main__':
     test('AAPL')
