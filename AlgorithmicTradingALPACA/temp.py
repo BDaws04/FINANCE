@@ -1,3 +1,0 @@
-"""
-Solely for formatting purposes
-"""
