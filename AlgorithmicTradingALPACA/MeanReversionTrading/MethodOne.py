@@ -13,7 +13,7 @@ import pandas as pd
 """
 This method involves using RSI2 indicator, and purchases the stock when it falls below 10
 This means the stock has fallen excessively relative to a gain, suggesting a climb back to the mean
-Once it reaches this place, the bot purchases the stock, then it places a sell limit order for the mean price
+Once it reaches this place, the bot purchases the stock, then it places a sell limit order for the SMA, which is GTC
 """
 
 def getSMA(stock: str, client: StockHistoricalDataClient):
